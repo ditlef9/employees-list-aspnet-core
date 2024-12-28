@@ -12,6 +12,17 @@
 1. Install Visual Studio Community: https://visualstudio.microsoft.com
 2. In Visual Studio Code Install Workloads: `ASP.Net and Web Development`
 
+Clone the repository and open it in Visual Studio Community.
+
+**Set font size**
+I like to increase the font size from 10 to 11.
+
+Tools > Options > Enviroment: Fonts and Colors
+
+* Size: 11
+
+
+
 ## ☁️ 2 Howto deploy to Azure
 
 
