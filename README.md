@@ -1,4 +1,4 @@
-# Example Code ASP.net Core
+# Example Code ASP.NET Core
 
 ## Index
 
