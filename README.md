@@ -1,11 +1,13 @@
 # Example Code ASP.NET Core
 
+![Logo](docs/aspnet-core-logo.png)
+
 ## Index
 
-[🏠 1 Howto run locally](1-howto-run-locally)<br>
-[☁️ 2 Howto deploy to Azure](2-howto-deploy-to-azure)<br>
-[🛠️ 3 How I created the application](4-how-i-created-the-application)<br>
-[📜 4 License](📜-5-license)<br>
+[🏠 1 Howto run locally](#🏠-1-howto-run-locally)<br>
+[☁️ 2 Howto deploy to Azure](#☁️-2-howto-deploy-to-azure)<br>
+[🛠️ 3 How I created the application](#🛠️-4-how-i-created-the-application)<br>
+[📜 4 License](#📜-5-license)<br>
 
 ## 🏠 1 Howto run locally
 

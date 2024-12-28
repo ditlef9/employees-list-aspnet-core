@@ -3,8 +3,8 @@
 
 
 # Build results
-example-aspnet-core/bin/
-example-aspnet-core/obj/
+bin/
+obj/
 
 # Visual Studio Code
 .vscode/
