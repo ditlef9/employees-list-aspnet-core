@@ -17,6 +17,7 @@
 
 ## 🛠️ 3 How I created the application
 
+Visual Studio > New Project > Language: C# > Project Types: Web > `ASP.NET Core Empty`
 
 
 ## 📜 4 License
