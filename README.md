@@ -89,7 +89,9 @@ WebApplication.CreateBuilder() initializes a new instance of a WebApplicationBui
 ### Quick Overview of HTTP and Web Servers  
 
 **1. What is HTTP?**  
-HTTP (HyperText Transfer Protocol) is a stateless protocol used to transfer data such as HTML, images, and multimedia between web servers and clients. It underpins how browsers and web applications communicate over the internet.  
+HTTP (HyperText Transfer Protocol) is a stateless protocol used to transfer data such as HTML, 
+images, and multimedia between web servers and clients. 
+It underpins how browsers and web applications communicate over the internet.  
 
 **2. What is the format of a Request Message?**  
 An HTTP request message has three parts: the request line (e.g., `GET / HTTP/1.1`), headers for metadata (e.g., `Host: example.com`), and an optional body for data (used in methods like POST).  
