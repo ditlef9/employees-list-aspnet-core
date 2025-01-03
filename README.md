@@ -2,6 +2,9 @@
 
 ![Logo](docs/aspnet-core-logo.png)
 
+ASP.NET Core with Razor Views!
+
+
 ## Index
 
 [🏠 1 Howto run locally](#-1-howto-run-locally)<br>
