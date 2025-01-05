@@ -46,16 +46,42 @@
  <thead>
   <tr>
     <th>
-        <span>Name</span>
+
+        @if (ViewBag.CurrentSortBy == nameof(PersonResponse.PersonName) && ViewBag.CurrentSortOrder == SortOrderOptions.ASC.ToString()){
+            <span><a href="~/persons/index?searchBy=@ViewBag.CurrentSearchBy&searchString=@ViewBag.CurrentSearchString&sortBy=@nameof(PersonResponse.PersonName)&sortOrder=@nameof(SortOrderOptions.DESC)">Name ▼</a></span>
+        }
+        else if (ViewBag.CurrentSortBy == nameof(PersonResponse.PersonName) && ViewBag.CurrentSortOrder == SortOrderOptions.DESC.ToString()){
+            <span><a href="~/persons/index?searchBy=@ViewBag.CurrentSearchBy&searchString=@ViewBag.CurrentSearchString&sortBy=@nameof(PersonResponse.PersonName)&sortOrder=@nameof(SortOrderOptions.ASC)">Name ▲</a></span>
+        }
+        else{    
+            <span><a href="~/persons/index?searchBy=@ViewBag.CurrentSearchBy&searchString=@ViewBag.CurrentSearchString&sortBy=@nameof(PersonResponse.PersonName)&sortOrder=@nameof(SortOrderOptions.ASC)">Name</a></span>
+        }
+        
     </th>
     <th>
-        <span>Email</span>
+        @if (ViewBag.CurrentSortBy == nameof(PersonResponse.Email) && ViewBag.CurrentSortOrder == SortOrderOptions.ASC.ToString()){
+            <span><a href="~/persons/index?searchBy=@ViewBag.CurrentSearchBy&searchString=@ViewBag.CurrentSearchString&sortBy=@nameof(PersonResponse.Email)&sortOrder=@nameof(SortOrderOptions.DESC)">Email ▼</a></span>
+        }
+        else if (ViewBag.CurrentSortBy == nameof(PersonResponse.Email) && ViewBag.CurrentSortOrder == SortOrderOptions.DESC.ToString()){
+            <span><a href="~/persons/index?searchBy=@ViewBag.CurrentSearchBy&searchString=@ViewBag.CurrentSearchString&sortBy=@nameof(PersonResponse.Email)&sortOrder=@nameof(SortOrderOptions.ASC)">Email ▲</a></span>
+        }
+        else{    
+            <span><a href="~/persons/index?searchBy=@ViewBag.CurrentSearchBy&searchString=@ViewBag.CurrentSearchString&sortBy=@nameof(PersonResponse.Email)&sortOrder=@nameof(SortOrderOptions.ASC)">Email</a></span>
+        }
     </th>
     <th>
         <span>DoB</span>
     </th>
     <th>
-        <span>Age</span>
+        @if (ViewBag.CurrentSortBy == nameof(PersonResponse.Age) && ViewBag.CurrentSortOrder == SortOrderOptions.ASC.ToString()){
+            <span><a href="~/persons/index?searchBy=@ViewBag.CurrentSearchBy&searchString=@ViewBag.CurrentSearchString&sortBy=@nameof(PersonResponse.Age)&sortOrder=@nameof(SortOrderOptions.DESC)">Age ▼</a></span>
+        }
+        else if (ViewBag.CurrentSortBy == nameof(PersonResponse.Age) && ViewBag.CurrentSortOrder == SortOrderOptions.DESC.ToString()){
+            <span><a href="~/persons/index?searchBy=@ViewBag.CurrentSearchBy&searchString=@ViewBag.CurrentSearchString&sortBy=@nameof(PersonResponse.Age)&sortOrder=@nameof(SortOrderOptions.ASC)">Age ▲</a></span>
+        }
+        else{    
+            <span><a href="~/persons/index?searchBy=@ViewBag.CurrentSearchBy&searchString=@ViewBag.CurrentSearchString&sortBy=@nameof(PersonResponse.Age)&sortOrder=@nameof(SortOrderOptions.ASC)">Age</a></span>
+        }
     </th>
     <th>
         <span>Country</span>
