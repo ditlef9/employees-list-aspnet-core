@@ -1,4 +1,4 @@
-﻿@model IEnumerable<PersonResponse>
+﻿@model IEnumerable<PersonResponse> // From ServiceContracts
 @{
  Layout = "~/Views/Shared/_Layout.cshtml";
  ViewBag.Title = "Persons";
@@ -6,6 +6,42 @@
 
 <h1>Persons</h1>
 
+<form action="~/persons/index" method="get">
+
+<!-- Search -->
+    <div class="box flex">
+        <div class="flex-1">
+            <select name="searchBy" class="form-input">
+                @foreach (var field in ViewBag.SearchFields){
+                    if(field.Key == ViewBag.CurrentSearchBy){
+                        <option value="@field.Key" selected="selected">@field.Value</option>
+                    }
+                    else{
+                        <option value="@field.Key">@field.Value</option>
+                    }
+                }
+                @* Eg: searchBy=PersonName&searchString=abc. Read by the controller (PersonController.cs) using dependency injection *@
+
+            </select>
+        </div>
+
+        <div class="flex-1">
+            <span>
+                <input type="text" name="searchString" id="Search" class="form-input" placeholder="Search" value="@ViewBag.CurrentSearchString" />
+            </span>
+        </div>
+
+        <div class="flex-1">
+            <span>
+                <button class="button button-blue-black">Search</button>
+                <a href="~/persons/index" class="link-hover">Clear all</a>
+            </span>
+        </div>
+
+    </div>
+<!-- //Search -->
+
+<!-- Persons list -->
 <table class="table w-100 mt">
  <thead>
   <tr>
@@ -47,3 +83,6 @@
     }
  </tbody>
 </table>
+<!-- //Persons list -->
+
+</form>

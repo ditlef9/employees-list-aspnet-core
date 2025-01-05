@@ -24,7 +24,9 @@ namespace Services
 
         new Country() { CountryID = Guid.Parse("15889048-AF93-412C-B8F3-22103E943A6D"), CountryName = "India" },
 
-        new Country() { CountryID = Guid.Parse("80DF255C-EFE7-49E5-A7F9-C35D7C701CAB"), CountryName = "Australia" }
+        new Country() { CountryID = Guid.Parse("80DF255C-EFE7-49E5-A7F9-C35D7C701CAB"), CountryName = "Australia" },
+
+        new Country() { CountryID = Guid.Parse("10DF255C-EFE7-49E5-A7F9-C35D7C701CAB"), CountryName = "Norway" }
         });
       }
     }
