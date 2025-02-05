@@ -1,8 +1,18 @@
-# Employees List ASP.NET Core
-
-![Logo](docs/employees-list-aspnet-core-logo.png)
+![Employees List ASP.NET Core](docs/employees-list-aspnet-core-logo.png)
 
 ASP.NET Core with Razor Views!
+
+
+
+CRUD operations:
+* List employee
+* Add employee
+* Edit employee
+* Delete employee
+
+Uses SQL Server database with Entity Framework Core with the following tables:
+* Countries
+* Persons
 
 
 ## Index
@@ -10,7 +20,7 @@ ASP.NET Core with Razor Views!
 [🏠 1 Howto run locally](#-1-howto-run-locally)<br>
 [☁️ 2 Howto deploy to Azure](#%EF%B8%8F-2-howto-deploy-to-azure)<br>
 [🛠️ 3 How I created the application](#%EF%B8%8F-3-how-i-created-the-application)<br>
-[➡️ 4 Key Differences Between ASP.NET MVC and ASP.NET Core  ](#-5-question-and-answers)
+[➡️ 4 Database](#-4-database)<br>
 [📜 5 License](#-5-license)<br>
 
 
@@ -33,8 +43,11 @@ Tools > Options > Enviroment: Fonts and Colors<br>
 dotnet watch run --launch-profile https
 ```
 
+--- 
+
 ## ☁️ 2 Howto deploy to Azure
 
+--- 
 
 ## 🛠️ 3 How I created the application
 
@@ -45,6 +58,28 @@ Visual Studio > New Project > Language: C# > Project Types: Web > `ASP.NET Core 
 For each controller i went to the function example `public IActionResult Index()`, right clicked
 and selected add `Razor View - Empty`.
 
+**Creating Entities, Controllers and Services**<br>
+Country and Person is created as Entities<br>
+Next I added controllers for Person named `PersonsController.cs`.
+
+I then added services for `CountriesService.cs` and `PersonsService.cs`.
+
+**Adding Views**<br>
+The views are located under `Views` directory. Persons-views are the 
+important views. 
+
+
+**Database with SQL Server**<br>
+
+I installed drivers for SQL Server:<br>
+
+`dotnet add package Microsoft.EntityFrameworkCore.SqlServer`
+
+The DB Sets are located in the file
+`Entities\PersonsDbContext.cs`.
+
+
+--- 
 
 ## ➡️ 4 Key Differences Between ASP.NET MVC and ASP.NET Core  
 
@@ -59,6 +94,8 @@ It features a modular architecture, supports multiple hosting options like Kestr
 and includes built-in dependency injection. ASP.NET Core supports development on various IDEs, 
 such as Visual Studio Code, and is actively maintained with regular updates, 
 making it ideal for modern and cloud-based apps.  
+
+--- 
 
 ## 📜 5 License
 
