@@ -1,0 +1,55 @@
+﻿@model PersonResponse
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Delete Person";
+}
+
+<h1>Delete Person</h1>
+
+<p>
+    <a href="~/persons/index" class="link-hover">Back</a>
+</p>
+
+<div class="w-50">
+    <form asp-controller="Persons" asp-action="Delete" method="post">
+        <input type="hidden" asp-for="PersonID" /> @* Hidden field for PersonID *@
+
+        @* Person Name *@
+        <div class="form-field flex">
+            <div class="w-25">
+                <label asp-for="PersonName" class="form-label pt">Person Name</label>
+            </div>
+            <div class="flex-1">
+                <p><input type="text" asp-for="PersonName" class="form-input" disabled="disabled"></p>
+            </div>
+        </div>
+
+        @* Email *@
+        <div class="form-field flex">
+            <div class="w-25">
+                <label asp-for="Email" class="form-label pt">Email</label>
+            </div>
+            <div class="flex-1">
+                <p><input type="text" asp-for="Email" class="form-input" disabled="disabled"></p>
+            </div>
+        </div>
+
+        <p>
+        <button type="submit">Delete</button>
+        </p>
+
+        @if (ViewBag.Errors != null)
+        {
+            <div class="text-red ml">
+                <ul>
+                    @foreach (string error in ViewBag.Errors)
+                    {
+                        <li class="ml">@error</li>
+                    }
+                </ul>
+            </div>
+        }
+
+    </form>
+</div>
