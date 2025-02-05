@@ -20,14 +20,15 @@ Uses SQL Server database with Entity Framework Core with the following tables:
 [🏠 1 Howto run locally](#-1-howto-run-locally)<br>
 [☁️ 2 Howto deploy to Azure](#%EF%B8%8F-2-howto-deploy-to-azure)<br>
 [🛠️ 3 How I created the application](#%EF%B8%8F-3-how-i-created-the-application)<br>
-[➡️ 4 Database](#-4-database)<br>
-[📜 5 License](#-5-license)<br>
+[📜 4 License](#-4-license)<br>
 
 
 ## 🏠 1 Howto run locally
 
 1. Install Visual Studio Community: https://visualstudio.microsoft.com
 2. In Visual Studio Code Install Workloads: `ASP.Net and Web Development`
+3. Microsoft SQL Server Developer - https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+4. Azure Data Studio - https://learn.microsoft.com/en-us/azure-data-studio/download-azure-data-studio?view=sql-server-ver16&tabs=win-install%2Cwin-user-install%2Credhat-install%2Cwindows-uninstall%2Credhat-uninstall
 
 Clone the repository and open it in Visual Studio Community.
 
@@ -37,6 +38,9 @@ I like to increase the font size from 10 to 11.
 Tools > Options > Enviroment: Fonts and Colors<br>
 
 * Size: 11
+
+**Create database**<br>
+Azure Data Studio > 
 
 **Start the app:**<br>
 ```
@@ -79,25 +83,10 @@ The DB Sets are located in the file
 `Entities\PersonsDbContext.cs`.
 
 
---- 
-
-## ➡️ 4 Key Differences Between ASP.NET MVC and ASP.NET Core  
-
-🏛️ ASP.NET MVC is a framework built on the .NET Framework and works only on Windows. 
-It uses a monolithic architecture, relies on IIS for hosting, 
-and offers limited support for dependency injection. 
-Development is primarily done in Visual Studio, and the framework is no longer actively updated or supported, 
-making it less suitable for modern web applications.  
-
-🌐 ASP.NET Core, on the other hand, is a cross-platform, high-performance framework built on .NET Core. 
-It features a modular architecture, supports multiple hosting options like Kestrel and IIS, 
-and includes built-in dependency injection. ASP.NET Core supports development on various IDEs, 
-such as Visual Studio Code, and is actively maintained with regular updates, 
-making it ideal for modern and cloud-based apps.  
 
 --- 
 
-## 📜 5 License
+## 📜 4 License
 
 This project is licensed under the
 [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
