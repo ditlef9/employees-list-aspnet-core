@@ -1,4 +1,6 @@
-﻿using ServiceContracts.Enums;
+﻿// ServiceContracts\DTO\PersonUpdateRequest.cs
+
+using ServiceContracts.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

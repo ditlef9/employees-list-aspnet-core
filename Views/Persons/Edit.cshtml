@@ -1,0 +1,125 @@
+﻿@model PersonUpdateRequest
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Edit Person";
+}
+
+<h1>Edit Person</h1>
+
+<p>
+    <a href="~/persons/index" class="link-hover">Back</a>
+</p>
+
+<div class="w-50">
+    <form asp-controller="Persons" asp-action="Edit" method="post">
+        <input type="hidden" asp-for="PersonID" /> @* Hidden field for PersonID *@
+
+        @* Person Name *@
+        <div class="form-field flex">
+            <div class="w-25">
+                <label asp-for="PersonName" class="form-label pt">Person Name</label>
+            </div>
+            <div class="flex-1">
+                <p><input type="text" asp-for="PersonName" class="form-input"></p>
+            </div>
+        </div>
+
+        @* Email *@
+        <div class="form-field flex">
+            <div class="w-25">
+                <label asp-for="Email" class="form-label pt">Email</label>
+            </div>
+            <div class="flex-1">
+                <p><input type="text" asp-for="Email" class="form-input"></p>
+            </div>
+        </div>
+
+        @* Date of Birth *@
+        <div class="form-field flex">
+            <div class="w-25">
+                <label asp-for="DateOfBirth" class="form-label pt">Date of Birth</label>
+            </div>
+            <div class="flex-1">
+                <p><input type="date" asp-for="DateOfBirth" class="form-input"></p>
+            </div>
+        </div>
+
+        @* Gender *@
+        <div class="form-field flex">
+            <div class="w-25">
+                <label asp-for="Gender" class="form-label pt">Gender</label>
+            </div>
+            <div class="flex-1">
+                <span>
+                    <input type="radio" asp-for="Gender" value="Male" class="form-input"> 
+                    <label for="Male">Male</label>
+                </span>
+                <span>
+                    <input type="radio" asp-for="Gender" value="Female" class="form-input"> 
+                    <label for="Female">Female</label>
+                </span>
+                <span>
+                    <input type="radio" asp-for="Gender" value="Other" class="form-input"> 
+                    <label for="Other">Other</label>
+                </span>
+            </div>
+        </div>
+
+        @* Country *@
+        <div class="form-field flex">
+            <div class="w-25">
+                <label asp-for="CountryID" class="form-label pt">Country</label>
+            </div>
+            <div class="flex-1">
+                <p>
+                    <select asp-for="CountryID" class="form-input">
+                        <option value="">Please Select</option>
+                        @foreach (CountryResponse country in ViewBag.Countries)
+                        {
+                            <option value="@country.CountryID">@country.CountryName</option>
+                        }
+                    </select>
+                </p>
+            </div>
+        </div>
+
+        @* Address *@
+        <div class="form-field flex">
+            <div class="w-25">
+                <label asp-for="Address" class="form-label pt">Address</label>
+            </div>
+            <div class="flex-1">
+                <p><textarea asp-for="Address"></textarea></p>
+            </div>
+        </div>
+
+        @* Receive Newsletters *@
+        <div class="form-field flex">
+            <div class="w-25"></div>
+            <div class="flex-1">
+                <p>
+                    <input type="checkbox" asp-for="ReceiveNewsLetters" class="form-input">
+                    <label asp-for="ReceiveNewsLetters" class="form-label">Receive News Letter</label>
+                </p>
+            </div>
+        </div>
+        
+        <p>
+            <button type="submit">Update</button>
+        </p>
+
+        @if (ViewBag.Errors != null)
+        {
+            <div class="text-red ml">
+                <ul>
+                    @foreach (string error in ViewBag.Errors)
+                    {
+                        <li class="ml">@error</li>
+                    }
+                </ul>
+            </div>
+        }
+
+    </form>
+</div>

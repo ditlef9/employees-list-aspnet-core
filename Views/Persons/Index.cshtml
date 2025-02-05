@@ -96,6 +96,9 @@
     <th>
         <span>Receive News Letter</span>
     </th>
+    <th>
+        <span>Actions</span>
+    </th>
   </tr>
  </thead>
 
@@ -109,6 +112,9 @@
             <td><span>@person.Country</span></td>
             <td><span>@person.Address</span></td>
             <td><span>@person.ReceiveNewsLetters</span></td>
+            <td><span>
+                <a asp-controller="Persons" asp-action="Edit" asp-route-personId="@person.PersonID">Edit</a>
+            </span></td>
         </tr>
     }
  </tbody>

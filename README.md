@@ -1,6 +1,6 @@
-# Example Code ASP.NET Core
+# Employees List ASP.NET Core
 
-![Logo](docs/aspnet-core-logo.png)
+![Logo](docs/employees-list-aspnet-core-logo.png)
 
 ASP.NET Core with Razor Views!
 

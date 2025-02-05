@@ -1,4 +1,6 @@
-﻿using System;
+﻿// ServiceContracts\DTO\PersonResponse.cs
+
+using System;
 using Entities;
 using ServiceContracts.Enums;
 
