@@ -58,22 +58,22 @@ dotnet watch run --launch-profile https
 
 Database is created in [🏠 1 Howto run locally](#-1-howto-run-locally)
 
-Tables are created in:<br>
-* 
-
-
 Database insertion is happening in<br>
-* `Entities\PersonsDbContext.cs`
+* DbContext `Entities\PersonsDbContext.cs` – Defines the database structure
+
+
+Tables are created in:<br>
+* Entity classes `Entities/` – Define the tables.
 
 
 
 --- 
 
-## ☁️ 2 Howto deploy to Azure
+## ☁️ 3 Howto deploy to Azure
 
 --- 
 
-## 🛠️ 3 How I created the application
+## 🛠️ 4 How I created the application
 
 Visual Studio > New Project > Language: C# > Project Types: Web > `ASP.NET Core Empty`
 
@@ -106,7 +106,7 @@ The DB Sets are located in the file
 
 --- 
 
-## 📜 4 License
+## 📜 5 License
 
 This project is licensed under the
 [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
