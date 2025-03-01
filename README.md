@@ -18,6 +18,7 @@ Uses SQL Server database with Entity Framework Core with the following tables:
 ## Index
 
 [🏠 1 Howto run locally](#-1-howto-run-locally)<br>
+[🛢 2 Database migration](#-2-Database migration)<br>
 [☁️ 2 Howto deploy to Azure](#%EF%B8%8F-2-howto-deploy-to-azure)<br>
 [🛠️ 3 How I created the application](#%EF%B8%8F-3-how-i-created-the-application)<br>
 [📜 4 License](#-4-license)<br>
@@ -40,12 +41,31 @@ Tools > Options > Enviroment: Fonts and Colors<br>
 * Size: 11
 
 **Create database**<br>
-Azure Data Studio > 
+Azure Data Studio > Localhost >  Datanases > `New Database`.
+
+* Name: EmployeesList
+
+The connections string is located in `appsettings.json` as the variable `DefaultConnection`.
 
 **Start the app:**<br>
 ```
 dotnet watch run --launch-profile https
 ```
+
+---
+
+## 🛢 2 Database migration
+
+Database is created in [🏠 1 Howto run locally](#-1-howto-run-locally)
+
+Tables are created in:<br>
+* 
+
+
+Database insertion is happening in<br>
+* `Entities\PersonsDbContext.cs`
+
+
 
 --- 
 
